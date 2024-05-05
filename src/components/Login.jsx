@@ -1,7 +1,17 @@
 import React from "react";
 import * as image from "../assets";
+import { auth, googleProvider } from "../firebase/setup";
+import { signInWithPopup } from "firebase/auth";
 
 const Login = () => {
+  const googleSignIn = async () => {
+    try {
+      await signInWithPopup(auth, googleProvider);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <div
@@ -31,7 +41,10 @@ const Login = () => {
                           Continue with phone
                         </h1>
                       </div>
-                      <div className="flex border border-gray-300 p-2 rounded-md mt-4 cursor-pointer">
+                      <div
+                        onClick={googleSignIn}
+                        className="flex border border-gray-300 p-2 rounded-md mt-4 cursor-pointer"
+                      >
                         <img src={image.google} className="w-6 h-6" />
                         <h1 className="font-semibold ml-12">
                           Continue with Google
