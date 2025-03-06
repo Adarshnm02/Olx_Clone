@@ -56,11 +56,3 @@ Built with **React**, **Tailwind CSS**, and **Firebase**, it offers a seamless e
 ✔ User profile management  
 
 ---
-
-## 🌍 Project Links
-
-🔗 [OLX Clone GitHub Repository](#) *(https://github.com/Adarshnm02/Olx_Clone)*  
-
----
-
-## ❤️ Made with love by [Adarsh NM](https://github.com/Adarshnm02)  
